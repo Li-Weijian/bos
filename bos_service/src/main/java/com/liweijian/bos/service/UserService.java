@@ -1,0 +1,13 @@
+package com.liweijian.bos.service;
+
+import com.liweijian.bos.domain.User;
+
+/**
+ * @Author:Liweijian
+ * @Description:
+ * @Date:Create in 17:15 2018/2/25 0025
+ */
+public interface UserService {
+
+    public User login(String username, String password);
+}

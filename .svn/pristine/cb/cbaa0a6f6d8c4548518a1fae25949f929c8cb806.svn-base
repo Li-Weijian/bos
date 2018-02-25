@@ -1,0 +1,19 @@
+package com.liweijian.bos.web.action;
+
+import com.liweijian.bos.domain.User;
+import com.liweijian.bos.web.action.base.IBaseAction;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Controller;
+
+/**
+ * @Author:Liweijian
+ * @Description:
+ * @Date:Create in 21:51 2018/2/24 0024
+ */
+
+@Controller
+//设置Scope("prototype")后，将在需要时才进行实例化，否则在启动时就进行实例化
+@Scope("prototype")
+public class UserAction extends IBaseAction<User> {
+
+}

@@ -1,0 +1,40 @@
+package com.liweijian.bos.web.action.base;
+
+import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
+import org.apache.poi.ss.formula.functions.T;
+
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+
+/**
+ * @Author:Liweijian
+ * @Description:
+ * @Date:Create in 21:40 2018/2/24 0024
+ */
+public class IBaseAction<T> extends ActionSupport implements ModelDriven<T> {
+
+    private T model;
+
+    //在构造方法中动态获取泛型的类型
+    public IBaseAction() {
+        ParameterizedType superclass = (ParameterizedType) this.getClass().getGenericSuperclass();
+        Type[] actualTypeArguments = superclass.getActualTypeArguments();
+        Class<T> clazz = (Class<T>) actualTypeArguments[0];
+
+        try {
+            //T 代表着实体类，Class代表着类.class
+            //所以需要利用反射进行实例化
+           model = clazz.newInstance();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public T getModel() {
+        return model;
+    }
+}
