@@ -2,7 +2,6 @@ package com.liweijian.bos.web.action;
 
 import com.liweijian.bos.domain.User;
 import com.liweijian.bos.service.UserService;
-import com.liweijian.bos.utils.BosUtils;
 import com.liweijian.bos.web.action.base.IBaseAction;
 import com.opensymphony.xwork2.ActionContext;
 import org.apache.commons.lang3.StringUtils;
@@ -10,8 +9,6 @@ import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
-
-import java.io.IOException;
 
 /**
  * @Author:Liweijian
@@ -60,30 +57,6 @@ public class UserAction extends IBaseAction<User> {
     public String logout(){
         ServletActionContext.getRequest().getSession().invalidate();
         return LOGIN;
-    }
-
-    /**
-     * 修改当前用户密码
-     * */
-    public String editPassword(){
-        String flat = "1";
-        String id = BosUtils.getLoginUser().getId();
-
-        try {
-            userService.editPassword(id,user.getPassword());
-        }catch (Exception e){
-            //修改密码失败
-            flat = "0";
-            e.printStackTrace();
-        }
-
-        try {
-            ServletActionContext.getResponse().setContentType("text/html;charset=utf-8");
-            ServletActionContext.getResponse().getWriter().print(flat);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return NONE;
     }
 
 

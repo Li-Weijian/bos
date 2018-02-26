@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="79117de3-049f-4113-93d1-73efb074799b" name="Default" comment="">
+    <list default="true" readonly="true" id="79117de3-049f-4113-93d1-73efb074799b" name="Default" comment="实现登录拦截器">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/base/IBaseDao.java" afterPath="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/base/IBaseDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/base/impl/BaseDaoImpl.java" afterPath="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/base/impl/BaseDaoImpl.java" />
@@ -608,7 +608,7 @@
       <workItem from="1519547751870" duration="3881000" />
       <workItem from="1519556771738" duration="7730000" />
       <workItem from="1519650626930" duration="448000" />
-      <workItem from="1519651447476" duration="1493000" />
+      <workItem from="1519651447476" duration="1466000" />
     </task>
     <task id="LOCAL-00001" summary="测试easyUI中的layout、accordion、tabs">
       <created>1519391318515</created>
@@ -659,18 +659,11 @@
       <option name="project" value="LOCAL" />
       <updated>1519569850444</updated>
     </task>
-    <task id="LOCAL-00008" summary="实现修改当前用户密码">
-      <created>1519652940285</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1519652940285</updated>
-    </task>
-    <option name="localTasksCounter" value="9" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29106000" />
+    <option name="totallyTimeSpent" value="29079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
@@ -758,8 +751,7 @@
     <MESSAGE value="实现用户注销功能" />
     <MESSAGE value="完成easyUi中messager、menubutton的测试" />
     <MESSAGE value="实现登录拦截器" />
-    <MESSAGE value="实现修改当前用户密码" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现修改当前用户密码" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现登录拦截器" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
