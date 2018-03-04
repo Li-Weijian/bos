@@ -16,7 +16,7 @@
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath }/js/easyui/ext/portal.css">
 <link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath }/css/default.css">	
+	href="${pageContext.request.contextPath }/css/default.css">
 <script type="text/javascript"
 	src="${pageContext.request.contextPath }/js/easyui/jquery.easyui.min.js"></script>
 <script type="text/javascript"
@@ -31,21 +31,21 @@
 		//alert("增加...");
 		$('#addStaffWindow').window("open");
 	}
-	
+
 	function doView(){
 		alert("查看...");
 	}
-	
+
 	function doDelete(){
 		alert("删除...");
 	}
-	
+
 	function doRestore(){
 		alert("将取派员还原...");
 	}
 	//工具栏
 	var toolbar = [ {
-		id : 'button-view',	
+		id : 'button-view',
 		text : '查询',
 		iconCls : 'icon-search',
 		handler : doView
@@ -114,11 +114,11 @@
 		width : 200,
 		align : 'center'
 	} ] ];
-	
+
 	$(function(){
 		// 先将body隐藏，再显示，不会出现页面刷新效果
 		$("body").css({visibility:"visible"});
-		
+
 		// 取派员信息表格
 		$('#grid').datagrid( {
 			iconCls : 'icon-forward',
@@ -134,7 +134,7 @@
 			columns : columns,
 			onDblClickRow : doDblClickRow
 		});
-		
+
 		// 添加取派员窗口
 		$('#addStaffWindow').window({
 	        title: '添加取派员',
@@ -145,13 +145,31 @@
 	        height: 400,
 	        resizable:false
 	    });
-		
-	});
+
+		//保存取派员
+        $("#save").click(function () {
+            //表单校验，如果通过，提交
+            var v = $("#addStaffForm").form("validate");
+            if (v){
+               $("#addStaffForm").submit();
+            }
+        });
+
+        var t = /^((1[3,5,8][0-9])|(14[5,7])|(17[0,6,7,8])|(19[7]))\d{8}$/;
+        $.extend($.fn.validatebox.defaults.rules, {
+            telephone: {
+                validator: function(value, param){
+                    return t.test(value);
+                },
+                message: '手机输入格式不正确！'
+            }
+        });
+    });
 
 	function doDblClickRow(rowIndex, rowData){
 		alert("双击表格数据...");
 	}
-</script>	
+</script>
 </head>
 <body class="easyui-layout" style="visibility:hidden;">
 	<div region="center" border="false">
@@ -160,28 +178,24 @@
 	<div class="easyui-window" title="对收派员进行添加或者修改" id="addStaffWindow" collapsible="false" minimizable="false" maximizable="false" style="top:20px;left:200px">
 		<div region="north" style="height:31px;overflow:hidden;" split="false" border="false" >
 			<div class="datagrid-toolbar">
-				<a id="save" icon="icon-save" href="#" class="easyui-linkbutton" plain="true" >保存</a>
+				<a id="save" icon="icon-save" href="#" class="easyui-linkbutton" plain="true">保存</a>
 			</div>
 		</div>
-		
+
 		<div region="center" style="overflow:auto;padding:5px;" border="false">
-			<form>
+			<form id="addStaffForm" action="staffAction_save.action" method="post">
 				<table class="table-edit" width="80%" align="center">
 					<tr class="title">
 						<td colspan="2">收派员信息</td>
 					</tr>
 					<!-- TODO 这里完善收派员添加 table -->
 					<tr>
-						<td>取派员编号</td>
-						<td><input type="text" name="id" class="easyui-validatebox" required="true"/></td>
-					</tr>
-					<tr>
 						<td>姓名</td>
 						<td><input type="text" name="name" class="easyui-validatebox" required="true"/></td>
 					</tr>
 					<tr>
 						<td>手机</td>
-						<td><input type="text" name="telephone" class="easyui-validatebox" required="true"/></td>
+						<td><input type="text" data-options="validType:'telephone'" name="telephone" class="easyui-validatebox" required="true"/></td>
 					</tr>
 					<tr>
 						<td>单位</td>
@@ -195,7 +209,7 @@
 					<tr>
 						<td>取派标准</td>
 						<td>
-							<input type="text" name="standard" class="easyui-validatebox" required="true"/>  
+							<input type="text" name="standard" class="easyui-validatebox" required="true"/>
 						</td>
 					</tr>
 					</table>
@@ -203,4 +217,4 @@
 		</div>
 	</div>
 </body>
-</html>	
+</html>
