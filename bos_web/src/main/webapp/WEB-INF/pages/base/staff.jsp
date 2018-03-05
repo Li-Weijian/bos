@@ -126,10 +126,10 @@
 			border : false,
 			rownumbers : true,
 			striped : true,
-			pageList: [30,50,100],
+			pageList: [1,30,50,100],
 			pagination : true,
 			toolbar : toolbar,
-			url : "json/staff.json",
+			url : "staffAction_quaryPage.action",
 			idField : 'id',
 			columns : columns,
 			onDblClickRow : doDblClickRow
