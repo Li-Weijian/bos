@@ -39,18 +39,4 @@ public class StaffServiceImpl implements StaffService {
             }
         }
     }
-
-    @Override
-    public void edit(Staff model) {
-        //获取数据库中的staff
-        Staff staff = staffDao.findById(model.getId());
-        staff.setName(model.getName());
-        staff.setTelephone(model.getTelephone());
-        staff.setStation(model.getStation());
-        staff.setHaspda(model.getHaspda());
-        staff.setStandard(model.getStandard());
-
-        staffDao.update(staff);
-
-    }
 }
