@@ -1,0 +1,64 @@
+package com.liweijian.bos.web.action;
+
+import com.liweijian.bos.domain.Region;
+import com.liweijian.bos.service.RegionService;
+import com.liweijian.bos.web.action.base.IBaseAction;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Row;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @Author:Liweijian
+ * @Description: 区域设置
+ * @Date:Create in 16:39 2018/3/7 0007
+ */
+
+@Controller
+public class RegionAction extends IBaseAction<Region>{
+
+    private File regionFile;
+
+    @Autowired
+    private RegionService regionService;
+
+    public String importXls() throws Exception {
+
+        //使用POI读取Excel文件
+        HSSFWorkbook workbook = new HSSFWorkbook(new FileInputStream(regionFile));
+        //获取工作簿
+        HSSFSheet sheet = workbook.getSheetAt(0);
+        //区域列表
+        List<Region> regionList = new ArrayList<Region>();
+
+        for (Row row: sheet) {
+            if (row.getRowNum() == 0){continue;} //不需要标题行
+            String id = row.getCell(0).getStringCellValue();  //城市编号
+            String province = row.getCell(1).getStringCellValue();  //省
+            String city = row.getCell(2).getStringCellValue();      //市
+            String district = row.getCell(3).getStringCellValue();  //区
+            String postcode = row.getCell(3).getStringCellValue();  //邮编
+
+            Region region = new Region(id,province,city,district,postcode,null,null,null);
+            regionList.add(region);
+        }
+
+        regionService.save(regionList);
+        return NONE;
+    }
+
+
+    public File getRegionFile() {
+        return regionFile;
+    }
+
+    public void setRegionFile(File regionFile) {
+        this.regionFile = regionFile;
+    }
+}

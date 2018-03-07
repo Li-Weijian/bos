@@ -42,6 +42,11 @@
         <action name="staffAction_*" class="com.liweijian.bos.web.action.StaffAction" method="{1}">
             <result name="list">/WEB-INF/pages/base/staff.jsp</result>
         </action>
+
+        <!-- 区域设置 -->
+        <action name="regionAction_*" class="com.liweijian.bos.web.action.RegionAction" method="{1}">
+
+        </action>
     </package>
 
 </struts>
