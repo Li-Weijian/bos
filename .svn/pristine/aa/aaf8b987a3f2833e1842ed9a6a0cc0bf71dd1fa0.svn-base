@@ -30,9 +30,6 @@ public class RegionAction extends IBaseAction<Region>{
     @Autowired
     private RegionService regionService;
 
-    /**
-     * 导入区域数据
-     * */
     public String importXls() throws Exception {
 
         //使用POI读取Excel文件
@@ -70,16 +67,6 @@ public class RegionAction extends IBaseAction<Region>{
         return NONE;
     }
 
-    /**
-     * 分页查询
-     * */
-    public String queryPage() throws Exception {
-
-        regionService.quaryPage(pageBean);
-        this.java2Json(pageBean,
-                new String[]{"currentPage","detachedCriteria","pageSize","subareas"});
-        return NONE;
-    }
 
     public File getRegionFile() {
         return regionFile;
