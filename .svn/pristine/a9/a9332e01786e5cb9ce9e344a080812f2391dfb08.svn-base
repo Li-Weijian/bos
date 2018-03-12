@@ -196,7 +196,6 @@
 	function doDblClickRow(){
 		alert("双击表格数据...");
 	}
-
 </script>	
 </head>
 <body class="easyui-layout" style="visibility:hidden;">
@@ -208,22 +207,11 @@
 		<div style="height:31px;overflow:hidden;" split="false" border="false" >
 			<div class="datagrid-toolbar">
 				<a id="save" icon="icon-save" href="#" class="easyui-linkbutton" plain="true" >保存</a>
-                <script type="text/javascript">
-                    $(function () {
-                       $("#save").click(function () {
-                            var v = $("#addSubareaFrom").form("validate");
-                            if(v){
-                                $("#addSubareaFrom").submit();
-                            }
-                       });
-                    });
-
-                </script>
 			</div>
 		</div>
 		
 		<div style="overflow:auto;padding:5px;" border="false">
-			<form id="addSubareaFrom" action="subareaAction_save.action" method="post">
+			<form>
 				<table class="table-edit" width="80%" align="center">
 					<tr class="title">
 						<td colspan="2">分区信息</td>

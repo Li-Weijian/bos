@@ -10,14 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="79117de3-049f-4113-93d1-73efb074799b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/SubareaDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/impl/SubareaDaoImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/impl/SubareaServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/SubareaService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bos_web/src/main/java/com/liweijian/bos/web/action/SubareaAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/SubareaService.java" afterPath="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/SubareaService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_web/src/main/java/com/liweijian/bos/web/action/SubareaAction.java" afterPath="$PROJECT_DIR$/bos_web/src/main/java/com/liweijian/bos/web/action/SubareaAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_web/src/main/resources/struts.xml" afterPath="$PROJECT_DIR$/bos_web/src/main/resources/struts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/RegionDao.java" afterPath="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/RegionDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/impl/RegionDaoImpl.java" afterPath="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/impl/RegionDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_domian/bos_domian.iml" afterPath="$PROJECT_DIR$/bos_domian/bos_domian.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_domian/src/main/java/com/liweijian/bos/domain/Region.java" afterPath="$PROJECT_DIR$/bos_domian/src/main/java/com/liweijian/bos/domain/Region.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_domian/src/main/java/com/liweijian/bos/domain/Subarea.hbm.xml" afterPath="$PROJECT_DIR$/bos_domian/src/main/java/com/liweijian/bos/domain/Subarea.hbm.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/RegionService.java" afterPath="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/RegionService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/impl/RegionServiceImpl.java" afterPath="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/impl/RegionServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_web/src/main/java/com/liweijian/bos/web/action/RegionAction.java" afterPath="$PROJECT_DIR$/bos_web/src/main/java/com/liweijian/bos/web/action/RegionAction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_web/src/main/webapp/WEB-INF/pages/base/subarea.jsp" afterPath="$PROJECT_DIR$/bos_web/src/main/webapp/WEB-INF/pages/base/subarea.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_web/target/bos_web/WEB-INF/pages/base/region.jsp" afterPath="$PROJECT_DIR$/bos_web/target/bos_web/WEB-INF/pages/base/region.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bos_web/target/bos_web/WEB-INF/pages/base/subarea.jsp" afterPath="$PROJECT_DIR$/bos_web/target/bos_web/WEB-INF/pages/base/subarea.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/bos_domian/target/" />
@@ -51,11 +56,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="Region.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bos_domian/src/main/java/com/liweijian/bos/domain/Region.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="subarea.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bos_web/src/main/webapp/WEB-INF/pages/base/subarea.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1910">
-              <caret line="206" column="39" lean-forward="false" selection-start-line="206" selection-start-column="39" selection-end-line="206" selection-end-column="39" />
+            <state relative-caret-position="231">
+              <caret line="222" column="120" lean-forward="false" selection-start-line="222" selection-start-column="112" selection-end-line="222" selection-end-column="120" />
               <folding />
             </state>
           </provider>
@@ -64,11 +79,21 @@
       <file leaf-file-name="SubareaAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bos_web/src/main/java/com/liweijian/bos/web/action/SubareaAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+            <state relative-caret-position="382">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubareaService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/SubareaService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,8 +104,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -100,6 +125,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/base/IUserBase.java" />
+        <option value="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/base/impl/IUserBaseImpl.java" />
+        <option value="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/impl/IUserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/bos_web/src/main/java/com/liweijian/bos/web/action/base/UserAction.java" />
         <option value="$PROJECT_DIR$/bos_web/src/main/webapp/login.jsp" />
         <option value="$PROJECT_DIR$/bos_web/src/main/resources/log4j.properties" />
         <option value="$USER_HOME$/.m2/repository/org/apache/struts/xwork/xwork-core/2.3.24/xwork-core-2.3.24.jar!/com/opensymphony/xwork2/ActionSupport.class" />
@@ -130,6 +159,7 @@
         <option value="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/StaffService.java" />
         <option value="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/impl/StaffServiceImpl.java" />
         <option value="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/dao/RegionDao.java" />
+        <option value="$PROJECT_DIR$/bos_web/src/main/resources/struts.xml" />
         <option value="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/base/impl/BaseDaoImpl.java" />
         <option value="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/base/IBaseDao.java" />
         <option value="$PROJECT_DIR$/bos_web/src/main/webapp/WEB-INF/pages/base/region.jsp" />
@@ -137,20 +167,15 @@
         <option value="$PROJECT_DIR$/bos_web/src/main/java/com/liweijian/bos/web/action/StaffAction.java" />
         <option value="$PROJECT_DIR$/bos_web/src/main/java/com/liweijian/bos/web/action/base/IBaseAction.java" />
         <option value="$PROJECT_DIR$/bos_domian/src/main/java/com/liweijian/bos/domain/Subarea.hbm.xml" />
+        <option value="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/SubareaService.java" />
+        <option value="$PROJECT_DIR$/bos_web/src/main/webapp/WEB-INF/pages/base/subarea.jsp" />
+        <option value="$PROJECT_DIR$/bos_web/src/main/java/com/liweijian/bos/web/action/SubareaAction.java" />
         <option value="$PROJECT_DIR$/bos_domian/src/main/java/com/liweijian/bos/domain/Region.java" />
         <option value="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/RegionService.java" />
         <option value="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/impl/RegionServiceImpl.java" />
         <option value="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/RegionDao.java" />
         <option value="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/impl/RegionDaoImpl.java" />
         <option value="$PROJECT_DIR$/bos_web/src/main/java/com/liweijian/bos/web/action/RegionAction.java" />
-        <option value="$PROJECT_DIR$/bos_web/src/main/webapp/WEB-INF/pages/base/subarea.jsp" />
-        <option value="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/SubareaService.java" />
-        <option value="$PROJECT_DIR$/bos_web/src/main/java/com/liweijian/bos/web/action/SubareaAction.java" />
-        <option value="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/dao/SubareaDao.java" />
-        <option value="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/impl/SubareaDaoImpl.java" />
-        <option value="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/SubareaDao.java" />
-        <option value="$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/impl/SubareaServiceImpl.java" />
-        <option value="$PROJECT_DIR$/bos_web/src/main/resources/struts.xml" />
       </list>
     </option>
   </component>
@@ -283,6 +308,16 @@
             <path>
               <item name="bos_parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="bos" type="462c0819:PsiDirectoryNode" />
+              <item name="bos_dao" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bos_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bos" type="462c0819:PsiDirectoryNode" />
               <item name="bos_domian" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -384,13 +419,77 @@
               <item name="bos_web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bos_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bos" type="462c0819:PsiDirectoryNode" />
+              <item name="bos_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bos_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bos" type="462c0819:PsiDirectoryNode" />
+              <item name="bos_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="action" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bos_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bos" type="462c0819:PsiDirectoryNode" />
+              <item name="bos_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bos_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bos" type="462c0819:PsiDirectoryNode" />
+              <item name="bos_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bos_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bos" type="462c0819:PsiDirectoryNode" />
+              <item name="bos_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bos_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bos" type="462c0819:PsiDirectoryNode" />
+              <item name="bos_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bos_parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bos" type="462c0819:PsiDirectoryNode" />
+              <item name="bos_web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -403,6 +502,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -418,21 +518,21 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/impl" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.liweijian.bos.service" />
+      <recent name="com.liweijian.bos.dao" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.liweijian.bos.dao" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.liweijian.bos.domain" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\java\workspace\bos\bos_utils\src\main\java\com\liweijian\bos\utils" />
       <recent name="D:\java\workspace\bos\bos_web\src\main\webapp\js" />
       <recent name="D:\java\workspace\bos\bos_domian\src\main\java\com\liweijian\bos\domain" />
       <recent name="D:\java\workspace\bos\bos_web\src\main\webapp\easyui" />
-    </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="com.liweijian.bos.domain" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.liweijian.bos.dao" />
-      <recent name="com.liweijian.bos.service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -679,8 +779,7 @@
       <workItem from="1520327065188" duration="5310000" />
       <workItem from="1520404467035" duration="10636000" />
       <workItem from="1520818654491" duration="3102000" />
-      <workItem from="1520824457409" duration="2011000" />
-      <workItem from="1520827094097" duration="1994000" />
+      <workItem from="1520824457409" duration="1910000" />
     </task>
     <task id="LOCAL-00001" summary="测试easyUI中的layout、accordion、tabs">
       <created>1519391318515</created>
@@ -787,18 +886,11 @@
       <option name="project" value="LOCAL" />
       <updated>1520423199094</updated>
     </task>
-    <task id="LOCAL-00016" summary="实现分区管理的添加下拉区域数据获取">
-      <created>1520826793985</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1520826793985</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80558000" />
+    <option name="totallyTimeSpent" value="78463000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -811,6 +903,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -822,15 +915,15 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28921023" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28921023" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3247768" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38153505" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38153505" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19366953" sideWeight="0.5461624" order="0" side_tool="true" content_ui="tabs" />
@@ -868,8 +961,7 @@
     <MESSAGE value="实现区域设置导入Excel" />
     <MESSAGE value="使用pingyin4j实现区域设置的shortcode和citycode的生成" />
     <MESSAGE value="完成区域设置的分页功能" />
-    <MESSAGE value="实现分区管理的添加下拉区域数据获取" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现分区管理的添加下拉区域数据获取" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成区域设置的分页功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -881,6 +973,15 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/bos_domian/src/main/java/com/liweijian/bos/domain/BcDecidedzoneEntity.java" />
+    <entry file="file://$PROJECT_DIR$/bos_domian/src/main/resources/hibernate.cfg.xml.bak">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="55" lean-forward="false" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bos_domian/src/main/java/com/liweijian/bos/domain/TUserEntity.hbm.xml" />
     <entry file="file://$PROJECT_DIR$/bos_domian/src/main/java/com/liweijian/bos/domain/TUserEntity.java" />
     <entry file="file://$PROJECT_DIR$/bos_domian/src/main/java/com/liweijian/bos/domain/BcSubareaEntity.hbm.xml" />
     <entry file="file://$PROJECT_DIR$/bos_domian/src/main/java/com/liweijian/bos/domain/BcSubareaEntity.java" />
@@ -1109,6 +1210,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/base/impl/BaseDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2046">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bos_web/src/main/java/com/liweijian/bos/web/action/StaffAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -1130,6 +1239,35 @@
         <state relative-caret-position="264">
           <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bos_web/src/main/resources/struts.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/SubareaService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bos_web/src/main/java/com/liweijian/bos/web/action/SubareaAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1186,85 +1324,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bos_domian/src/main/java/com/liweijian/bos/domain/Region.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="429">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/base/impl/BaseDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-490">
-          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/SubareaService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/SubareaDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bos_dao/src/main/java/com/liweijian/bos/dao/impl/SubareaDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bos_service/src/main/java/com/liweijian/bos/service/impl/SubareaServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#609#610#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bos_web/src/main/resources/struts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="51" column="46" lean-forward="true" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bos_web/src/main/java/com/liweijian/bos/web/action/SubareaAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bos_web/src/main/webapp/WEB-INF/pages/base/subarea.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1910">
-          <caret line="206" column="39" lean-forward="false" selection-start-line="206" selection-start-column="39" selection-end-line="206" selection-end-column="39" />
+        <state relative-caret-position="231">
+          <caret line="222" column="120" lean-forward="false" selection-start-line="222" selection-start-column="112" selection-end-line="222" selection-end-column="120" />
           <folding />
         </state>
       </provider>

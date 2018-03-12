@@ -1,0 +1,17 @@
+package com.liweijian.bos.web.action;
+
+import com.liweijian.bos.domain.Subarea;
+import com.liweijian.bos.service.SubareaService;
+import com.liweijian.bos.web.action.base.IBaseAction;
+
+/**
+ * @Author:Liweijian
+ * @Description:
+ * @Date:Create in 11:01 2018/3/12 0012
+ */
+public class SubareaAction extends IBaseAction<Subarea> {
+
+    private SubareaService subareaService;
+
+
+}

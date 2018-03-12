@@ -45,7 +45,11 @@
 
         <!-- 区域设置 -->
         <action name="regionAction_*" class="com.liweijian.bos.web.action.RegionAction" method="{1}">
+        </action>
 
+        <!-- 分区设置 -->
+        <action name="subareaAction_*" class="com.liweijian.bos.web.action.SubareaAction" method="{1}">
+            <result name="list">/WEB-INF/pages/base/subarea.jsp</result>
         </action>
     </package>
 
