@@ -3,15 +3,21 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 						http://www.springframework.org/schema/beans/spring-beans.xsd
 						http://www.springframework.org/schema/context
 						http://www.springframework.org/schema/context/spring-context.xsd
 						http://www.springframework.org/schema/aop
+						http://cxf.apache.org/bindings/soap
+                      http://cxf.apache.org/schemas/configuration/soap.xsd
+                      http://cxf.apache.org/jaxws
+                      http://cxf.apache.org/schemas/jaxws.xsd
 						http://www.springframework.org/schema/aop/spring-aop.xsd
 						http://www.springframework.org/schema/tx
 						http://www.springframework.org/schema/tx/spring-tx.xsd">
+
 
     <!-- 读取数据源文件：db.properties -->
     <context:property-placeholder location="classpath:db.properties" />
@@ -47,6 +53,40 @@
         </property>
     </bean>
 
+    <!-- 配置shiro -->
+    <bean id="shiroSecurityFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="loginUrl" value="/login.jsp"></property>
+        <property name="unauthorizedUrl" value="/unauthorized.jsp"></property>
+        <property name="successUrl" value="/index.jsp"></property>
+
+        <!-- 配置管理器 -->
+        <property name="securityManager" ref="securityManager"></property>
+
+        <!-- 配置过滤规则 -->
+        <property name="filterChainDefinitions">
+            <value>
+                /css/** = anon
+                /js/** = anon
+                /images/** = anon
+                /validatecode.jsp* = anon
+                /login.jsp = anon
+                /userAction_login.action = anon
+                /page_base_staff.action = perms["staff-list"]
+                /* = authc
+            </value>
+        </property>
+    </bean>
+
+    <!-- 注册安全管理器 -->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="realm" ref="bosRealm"></property>
+    </bean>
+
+    <!-- 注册Realm -->
+    <bean id="bosRealm" class="com.liweijian.bos.realm.BOSRealm"></bean>
+
+
+
 
     <!-- 配置事务管理器 -->
     <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
@@ -60,5 +100,8 @@
     <context:annotation-config></context:annotation-config>
 
     <tx:annotation-driven></tx:annotation-driven>
+
+    <!--<jaxws:client id="crmClient" address="http://192.168.1.2:8080/service/customer" serviceClass="com.liweijian.service.ICustomerService">-->
+    <!--</jaxws:client>-->
 
 </beans>
