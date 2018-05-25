@@ -8,6 +8,8 @@
         <constant name="struts.objectFactory" value="spring"/>
      -->
     <package name="basicstruts2" extends="struts-default">
+
+
         <!--注册拦截器-->
         <interceptors>
             <interceptor name="loginInterceptor" class="com.liweijian.bos.web.interceptor.BosLoginInterceptor">
@@ -24,10 +26,16 @@
         <!-- 设置默认拦截器栈 -->
         <default-interceptor-ref name="myStack"></default-interceptor-ref>
 
-        <!-- 设置全局结果集 -->
+        <!-- 全局异常处理结果集 -->
         <global-results>
+            <result name="unauthorized">/unauthorized.jsp</result>
             <result name="login">/login.jsp</result>
         </global-results>
+
+        <!-- 全局异常 -->
+        <global-exception-mappings>
+            <exception-mapping exception="org.apache.shiro.authz.UnauthorizedException" result="unauthorized"></exception-mapping>
+        </global-exception-mappings>
 
         <!-- 需要进行权限控制的页面访问 -->
         <action name="page_*_*">

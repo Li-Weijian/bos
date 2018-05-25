@@ -31,7 +31,7 @@ import java.io.IOException;
 public class UserAction extends IBaseAction<User> {
 
 
-    /*模型驱动已经字BaseAction中实现*/
+    /*模型驱动已经在BaseAction中实现*/
 
     private String checkcode;
 
@@ -48,7 +48,7 @@ public class UserAction extends IBaseAction<User> {
 
         String validateCode = (String) ActionContext.getContext().getSession().get("key");
         if (StringUtils.isNotBlank(checkcode) && checkcode.equals(validateCode)) {
-            Subject subject = SecurityUtils.getSubject();  //获得subject对象，初始状态为：“未认证”
+            Subject subject = SecurityUtils.getSubject();  //获得当前用户对象，初始状态为：“未认证”
             AuthenticationToken token = new UsernamePasswordToken(model.getUsername(), MD5Utils.md5(model.getPassword()));  //创建用户名密码令牌
 
             try {
@@ -62,7 +62,7 @@ public class UserAction extends IBaseAction<User> {
             //user用户在Realm的37行第一个参数绑定到本地线程。
             User user = (User) subject.getPrincipal();
             //取出存入session
-            ActionContext.getContext().getSession().put("user", this.user);
+            ActionContext.getContext().getSession().put("user", user);
             return HOME;
         } else {
             addActionError("验证码不正确");

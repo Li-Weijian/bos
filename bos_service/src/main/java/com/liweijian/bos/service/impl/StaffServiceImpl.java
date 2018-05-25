@@ -16,7 +16,7 @@ import java.util.List;
  * @Date:Create in 21:27 2018/3/4 0004
  */
 
-@Service
+@Service("staffService")
 public class StaffServiceImpl implements StaffService {
 
     @Autowired

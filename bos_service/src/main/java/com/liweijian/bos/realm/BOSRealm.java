@@ -5,9 +5,12 @@ import com.liweijian.bos.domain.User;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.Authorizer;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.Collections;
 
 /**
  * @Author:Liweijian
@@ -43,7 +46,10 @@ public class BOSRealm extends AuthorizingRealm {
      * */
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-        return null;
+        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
+        info.addStringPermission("staff-list");
+        //TODO 后期根据不同用户授予不同权限
+        return info;
     }
 
 }

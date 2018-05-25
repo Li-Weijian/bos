@@ -85,7 +85,14 @@
     <!-- 注册Realm -->
     <bean id="bosRealm" class="com.liweijian.bos.realm.BOSRealm"></bean>
 
+    <!-- 开启Shiro注解支持 -->
+    <bean id="defaultAdvisorAutoProxyCreator" class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
+        <!-- 必须使用cglib方式为Action创建对象 -->
+        <property name="proxyTargetClass" value="true"/>
+    </bean>
 
+    <!-- 配置shiro提供的切面类，用于创建代理对象 -->
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor"/>
 
 
     <!-- 配置事务管理器 -->
@@ -98,7 +105,6 @@
 
     <!-- 支持Spring注解 -->
     <context:annotation-config></context:annotation-config>
-
     <tx:annotation-driven></tx:annotation-driven>
 
     <!--<jaxws:client id="crmClient" address="http://192.168.1.2:8080/service/customer" serviceClass="com.liweijian.service.ICustomerService">-->

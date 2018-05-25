@@ -1,14 +1,9 @@
 package com.liweijian.bos.web.action;
 
-import com.google.gson.Gson;
 import com.liweijian.bos.domain.Staff;
 import com.liweijian.bos.service.StaffService;
-import com.liweijian.bos.utils.PageBean;
 import com.liweijian.bos.web.action.base.IBaseAction;
-import net.sf.json.JSONObject;
-import org.apache.struts2.ServletActionContext;
-import org.hibernate.criterion.DetachedCriteria;
-import org.hibernate.criterion.Restrictions;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
@@ -56,6 +51,7 @@ public class StaffAction extends IBaseAction<Staff> {
     /**
      * 取派员批量删除
      */
+    @RequiresPermissions("staff-delete")  //执行这个方法，需要当前用户具有这个权限
     public String delete(){
         staffService.deleteBatch(ids);
         return LIST;
@@ -86,4 +82,11 @@ public class StaffAction extends IBaseAction<Staff> {
         this.ids = ids;
     }
 
+    public StaffService getStaffService() {
+        return staffService;
+    }
+
+    public void setStaffService(StaffService staffService) {
+        this.staffService = staffService;
+    }
 }
