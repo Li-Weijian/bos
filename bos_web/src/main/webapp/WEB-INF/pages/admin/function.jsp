@@ -39,7 +39,9 @@
 					}
 				}           
 			],
-			url : '',
+            pageList: [10,20,30],//选择一页显示多少数据
+            pagination : true,//在DataGrid控件底部显示分页工具栏。
+			url : '${pageContext.request.contextPath}/functionAction_list.action',
 			columns : [[
 			  {
 				  field : 'id',
@@ -57,8 +59,15 @@
 				  width : 200
 			  },  
 			  {
-				  field : 'generateMenu',
+				  field : 'generatemenu',
 				  title : '是否生成菜单',
+                  formatter : function(data,row, index){
+                      if(data=="1"){
+                          return "是";
+                      }else{
+                          return "否";
+                      }
+                  },
 				  width : 200
 			  },  
 			  {

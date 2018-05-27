@@ -65,6 +65,12 @@
             <result name="list">/WEB-INF/pages/base/decidedzone.jsp</result>
         </action>
 
+        <!-- 权限设置 -->
+        <action name="functionAction_*" class="com.liweijian.bos.web.action.FunctionAction" method="{1}">
+            <result name="list">/WEB-INF/pages/admin/function.jsp</result>
+        </action>
+
+
     </package>
 
 </struts>
