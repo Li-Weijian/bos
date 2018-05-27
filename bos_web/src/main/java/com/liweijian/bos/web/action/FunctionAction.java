@@ -23,7 +23,7 @@ public class FunctionAction extends IBaseAction<Function> {
     public String listajax(){
 
         List<Function> list = functionService.listajax();
-        this.java2Json(list,new String[]{"parentFunction","roles","children"});
+        this.java2Json(list,new String[]{"parentFunction","roles"});
         return NONE;
     }
 

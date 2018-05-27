@@ -70,6 +70,11 @@
             <result name="list">/WEB-INF/pages/admin/function.jsp</result>
         </action>
 
+        <!-- 角色管理 -->
+        <action name="roleAction_*" class="com.liweijian.bos.web.action.RoleAction" method="{1}">
+            <result name="list">/WEB-INF/pages/admin/role.jsp</result>
+        </action>
+
 
     </package>
 

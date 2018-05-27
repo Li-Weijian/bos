@@ -47,7 +47,9 @@
 					}
 				}           
 			],
-			url : '',
+			url : '${pageContext.request.contextPath}/roleAction_list.action',
+            pageList: [10,20,30],//选择一页显示多少数据
+            pagination : true,//在DataGrid控件底部显示分页工具栏。
 			columns : [[
 				{
 					field : 'id',

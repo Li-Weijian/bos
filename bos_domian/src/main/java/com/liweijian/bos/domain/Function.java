@@ -12,17 +12,24 @@ public class Function implements java.io.Serializable {
 	// Fields
 
 	private String id;
-	private Function parentFunction;//当前权限的上级权限
 	private String name;
 	private String code;
 	private String description;
 	private String page;
 	private String generatemenu;//是否生成菜单，1：是 0：否
 	private Integer zindex;
+	private Function parentFunction;//当前权限的上级权限
 	private Set roles = new HashSet(0);//当前权限对应的多个角色
 	private Set children = new HashSet(0);//当前权限的下级权限
 
-	public String getId() {
+	public Function() {
+	}
+
+	public Function(String id) {
+		this.id = id;
+	}
+
+    public String getId() {
 		return id;
 	}
 	public void setId(String id) {
