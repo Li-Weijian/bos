@@ -1,5 +1,6 @@
 package com.liweijian.bos.domain;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -52,6 +53,22 @@ public class User implements java.io.Serializable {
 
 	// Property accessors
 
+	public String getRoleNames(){
+		String roleNames = "";
+		for (Role role:roles) {
+			roleNames += role.getName()+"  ";
+		}
+		return roleNames;
+	}
+
+	public String getBirthdayString(){
+		if (birthday != null){
+			String format = new SimpleDateFormat("yyyy-MM-dd").format(birthday);
+			return format;
+		}else{
+			return "暂无数据";
+		}
+	}
 
 	public Set<Role> getRoles() {
 		return roles;

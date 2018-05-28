@@ -8,4 +8,6 @@ import java.util.List;
 public interface FunctionDao extends IBaseDao<Function> {
 
     List<Function> findAll();
+
+    List<Function> findFunctionListByUserId(String id);
 }

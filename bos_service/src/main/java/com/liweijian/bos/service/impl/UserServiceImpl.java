@@ -5,6 +5,7 @@ import com.liweijian.bos.domain.Role;
 import com.liweijian.bos.domain.User;
 import com.liweijian.bos.service.UserService;
 import com.liweijian.bos.utils.MD5Utils;
+import com.liweijian.bos.utils.PageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -45,5 +46,10 @@ public class UserServiceImpl implements UserService {
             }
         }
         userDao.save(model);
+    }
+
+    @Override
+    public void queryPage(PageBean pageBean) {
+        userDao.quaryPage(pageBean);
     }
 }

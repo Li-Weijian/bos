@@ -3,6 +3,7 @@ package com.liweijian.bos.dao.base;
 import com.liweijian.bos.domain.Region;
 import com.liweijian.bos.domain.User;
 import com.liweijian.bos.utils.PageBean;
+import org.hibernate.criterion.DetachedCriteria;
 
 import java.io.Serializable;
 import java.util.List;
@@ -21,6 +22,7 @@ public interface IBaseDao<T> {
     public List<T> findAll();
     public void quaryPage(PageBean pageBean);
     public void saveOrUpdate(T entity);
+    public List<T> findByCriteria(DetachedCriteria detachedCriteria);
 
     /**
      * 执行任意更新操作，在实体类的映射文件中配置hql和参数

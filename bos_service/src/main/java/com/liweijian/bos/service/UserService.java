@@ -1,6 +1,7 @@
 package com.liweijian.bos.service;
 
 import com.liweijian.bos.domain.User;
+import com.liweijian.bos.utils.PageBean;
 
 /**
  * @Author:Liweijian
@@ -14,4 +15,6 @@ public interface UserService {
     void editPassword(String id, String password);
 
     void save(User model, String[] roleIds);
+
+    void queryPage(PageBean pageBean);
 }

@@ -112,6 +112,16 @@ public class UserAction extends IBaseAction<User> {
     }
 
 
+    /**
+     * 查询用户列表
+     * */
+    public String pageQuery(){
+        userService.queryPage(pageBean);
+        java2Json(pageBean.getRows(),new String[]{"roles"});
+        return NONE;
+    }
+
+
 
     public String getCheckcode() {
         return checkcode;

@@ -65,7 +65,7 @@
 		rowspan : 2,
 		align : 'center'
 	}, {
-		field : 'birthday',
+		field : 'birthdayString',
 		title : '生日',
 		width : 120,
 		rowspan : 2,
@@ -74,8 +74,8 @@
 		title : '其他信息',
 		colspan : 2
 	}, {
-		field : 'telephone',
-		title : '电话',
+		field : 'roleNames',
+		title : '角色',
 		width : 800,
 		rowspan : 2
 	} ], [ {
@@ -99,7 +99,9 @@
 			rownumbers : true,
 			striped : true,
 			toolbar : toolbar,
-			url : "json/users.json",
+            pageList: [10,20,30],//选择一页显示多少数据
+            pagination : true,//在DataGrid控件底部显示分页工具栏。
+			url : "${pageContext.request.contextPath}/userAction_pageQuery.action",
 			idField : 'id', 
 			frozenColumns : frozenColumns,
 			columns : columns,
