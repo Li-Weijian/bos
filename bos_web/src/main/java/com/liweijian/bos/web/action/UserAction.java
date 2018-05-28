@@ -34,6 +34,7 @@ public class UserAction extends IBaseAction<User> {
     /*模型驱动已经在BaseAction中实现*/
 
     private String checkcode;
+    private String[] roleIds;
 
     private User user = getModel();
 
@@ -71,29 +72,6 @@ public class UserAction extends IBaseAction<User> {
     }
 
     /**
-     * 用户登录
-     * */
-    public String login_bak() {
-
-        String validateCode = (String) ActionContext.getContext().getSession().get("key");
-        if (StringUtils.isNotBlank(checkcode) && checkcode.equals(validateCode)) {
-            User user = userService.login(this.user.getUsername(), this.user.getPassword());
-            if (user != null){
-                ActionContext.getContext().getSession().put("user", user);
-                return HOME;
-            }else {
-                addActionError("用户名或者密码不正确");
-                return LOGIN;
-            }
-        } else {
-            addActionError("验证码不正确");
-            return LOGIN;
-        }
-    }
-
-
-
-    /**
      * 用户注销
      * */
     public String logout(){
@@ -125,6 +103,14 @@ public class UserAction extends IBaseAction<User> {
         return NONE;
     }
 
+    /**
+     * 添加用户
+     * */
+    public String add(){
+        userService.save(model,roleIds);
+        return LIST;
+    }
+
 
 
     public String getCheckcode() {
@@ -133,5 +119,34 @@ public class UserAction extends IBaseAction<User> {
 
     public void setCheckcode(String checkcode) {
         this.checkcode = checkcode;
+    }
+
+    public String[] getRoleIds() {
+        return roleIds;
+    }
+
+    public void setRoleIds(String[] roleIds) {
+        this.roleIds = roleIds;
+    }
+
+    /**
+     * 用户登录
+     * */
+    public String login_bak() {
+
+        String validateCode = (String) ActionContext.getContext().getSession().get("key");
+        if (StringUtils.isNotBlank(checkcode) && checkcode.equals(validateCode)) {
+            User user = userService.login(this.user.getUsername(), this.user.getPassword());
+            if (user != null){
+                ActionContext.getContext().getSession().put("user", user);
+                return HOME;
+            }else {
+                addActionError("用户名或者密码不正确");
+                return LOGIN;
+            }
+        } else {
+            addActionError("验证码不正确");
+            return LOGIN;
+        }
     }
 }

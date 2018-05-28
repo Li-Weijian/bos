@@ -1,6 +1,7 @@
 package com.liweijian.bos.service.impl;
 
 import com.liweijian.bos.dao.IUserDao;
+import com.liweijian.bos.domain.Role;
 import com.liweijian.bos.domain.User;
 import com.liweijian.bos.service.UserService;
 import com.liweijian.bos.utils.MD5Utils;
@@ -32,5 +33,17 @@ public class UserServiceImpl implements UserService {
     public void editPassword(String id, String password) {
         password = MD5Utils.md5(password);
         userDao.excuteUpdate("user.editPassword",password,id);
+    }
+
+    @Override
+    public void save(User model, String[] roleIds) {
+        model.setPassword(MD5Utils.md5(model.getPassword()));
+        if (roleIds != null && roleIds.length > 0){
+            for (String roleId:roleIds) {
+                Role role = new Role(roleId);
+                model.getRoles().add(role);
+            }
+        }
+        userDao.save(model);
     }
 }

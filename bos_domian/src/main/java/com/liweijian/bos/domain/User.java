@@ -1,6 +1,8 @@
 package com.liweijian.bos.domain;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * User entity. @author MyEclipse Persistence Tools
@@ -19,6 +21,8 @@ public class User implements java.io.Serializable {
 	private String station;
 	private String telephone;
 	private String remark;
+	private Set<Role> roles = new HashSet(0);//当前用户对应对歌角色
+
 
 	// Constructors
 
@@ -33,10 +37,7 @@ public class User implements java.io.Serializable {
 		this.password = password;
 	}
 
-	/** full constructor */
-	public User(String id, String username, String password, Double salary,
-			Date birthday, String gender, String station, String telephone,
-			String remark) {
+	public User(String id, String username, String password, Double salary, Date birthday, String gender, String station, String telephone, String remark, Set roles) {
 		this.id = id;
 		this.username = username;
 		this.password = password;
@@ -46,9 +47,19 @@ public class User implements java.io.Serializable {
 		this.station = station;
 		this.telephone = telephone;
 		this.remark = remark;
+		this.roles = roles;
 	}
 
 	// Property accessors
+
+
+	public Set<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
+	}
 
 	public String getId() {
 		return this.id;

@@ -12,4 +12,6 @@ public interface UserService {
     public User login(String username, String password);
 
     void editPassword(String id, String password);
+
+    void save(User model, String[] roleIds);
 }

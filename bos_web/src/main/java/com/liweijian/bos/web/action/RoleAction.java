@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
+import java.util.List;
+
 @Controller
 @Scope("prototype")
 public class RoleAction extends IBaseAction<Role> {
@@ -32,6 +34,16 @@ public class RoleAction extends IBaseAction<Role> {
         java2Json(pageBean.getRows(),new String[]{"functions","users"});
         return NONE;
     }
+
+    /**
+     * ajax查询角色列表
+     * */
+    public String listajax(){
+        List<Role> roleList = roleService.findAll();
+        java2Json(roleList,new String[]{"functions","users"});
+        return NONE;
+    }
+
 
     public String getFunctionIds() {
         return functionIds;
